@@ -1,0 +1,26 @@
+
+.test{
+	background-color:red; 
+}
+
+div{
+	color:yellow;
+}
+
+span{
+	font-size: 60px;
+}
+
+div.especial p span.hola{
+	font-size: 10px;
+	color:green;
+}
+
+#nombreDeSelector{
+	
+}
+
+input[type="email"]{
+	color:red;
+	font-size: 40px;
+}
