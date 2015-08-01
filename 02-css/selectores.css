@@ -1,0 +1,11 @@
+/* Selector de ID */
+#elementoUnico{
+	color: red;
+}
+
+/* Selector de Tag */
+
+h1{
+	color:green;
+	font-size: 80px;
+}
