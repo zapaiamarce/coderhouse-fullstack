@@ -1,0 +1,25 @@
+#Clase 1 (CSS)
+
+- Agenda
+	- Devolución de TPs HTML
+		- Abstracción de la parte visual
+	- Repaso proceso de diseño de una app
+		- Mockup
+		- Front + Navegacion (Logicless)
+		- Front + Mockups (Backendless)
+		- Back
+	- CSS (avance de html.png)
+		- Como funciona CSS en el browser
+		- Selectores
+		- Propiedades
+		- Medidas relativas
+		- Medidas absolutas
+		- Valores de colores 
+		- Float
+		- Centrado vertical
+		- Display
+		- Position
+		- Layouts
+		- Grillas
+- TP: tarea. HTML & CSS completo de css.png 
+- Links: 
