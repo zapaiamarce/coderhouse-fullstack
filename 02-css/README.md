@@ -1,5 +1,4 @@
-#Clase 1 (CSS)
-
+#Clase 2 (CSS)
 - Agenda
 	- Devolución de TPs HTML
 		- Abstracción de la parte visual
@@ -23,3 +22,14 @@
 		- Grillas
 - TP: tarea. HTML & CSS completo de css.png 
 - Links: 
+	-[Balsamiq mockups](https://balsamiq.com/)
+	-[Testeo de mockups](http://www.invisionapp.com/)
+	-[Pixate mockups](http://www.pixate.com/)
+	-[CSS Selectores](https://developer.mozilla.org/es/docs/Web/CSS/Introducci%C3%B3n/Selectors)
+
+	- [Centrar contenido](https://css-tricks.com/centering-css-complete-guide/)
+	- [CSS Filters (escala de grises)](https://css-tricks.com/almanac/properties/f/filter/)
+	- [Box Sizing](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+	- [Media Queries](https://developer.mozilla.org/es/docs/CSS/Media_queries)
+	- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
