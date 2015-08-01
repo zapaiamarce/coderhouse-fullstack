@@ -2,6 +2,12 @@ body{
 	margin:0;
 }
 
+/*box sizing*/
+
+*{
+  box-sizing:border-box;
+}
+
 .mainHeader{
 	height: 70px;
 	/*background-color:#CCDD66;*/
@@ -20,6 +26,7 @@ body{
 	margin:0 auto;
 	position:relative;
 }
+
 .mainHeader .content .logo{
 	display:inline-block;
 	margin-top: 10px;
@@ -29,6 +36,9 @@ body{
 	position: absolute;
 	top:26px;
 	right:20px;
+}
+.mainHeader .content .menu .abrirMenu{
+	display:none;
 }
 .mainHeader .content .menu .menuList{
 	padding:0;
@@ -57,6 +67,74 @@ body{
 	font-family: 'Helvetica';
 	text-transform: uppercase;
 	font-size: 14px;
+}
+
+
+@media screen and (max-width: 930px) {
+	.mainHeader .content{
+		width:100%;
+	}
+
+	.mainHeader .content .menu .menuList .menuItem:not(:last-child){
+		
+		margin-right: 10px;	
+	}
+
+	.mainHeader 
+	.content 
+	.menu 
+	.menuList 
+	.menuItem 
+	.link{
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	
+	.mainHeader .content .menu .abrirMenu{
+		display:inline-block;
+	}
+
+	.mainHeader .content .menu .menuList{
+		background-color:#C84742;
+		padding:20px;
+		position:absolute;
+		right:0;
+		display:none;
+	}
+	.mainHeader .content .menu .menuList .menuItem{
+		display:block;
+		margin-bottom: 20px;
+	}
+	.mainHeader .content .menu:hover .menuList{
+		display:block;
+	}
+	/*.mainHeader .content .menu .abrirMenu:hover{
+		display:block;
+	}*/
+	/*.mainHeader .content .menu .abrirMenu:hover +menuList{
+	}*/
+}
+
+.banner{
+	color:white;
+	overflow: auto;
+	background-image: url(http://exclusiveventas.cl/static/images/carouselItem4.jpg);
+	height:400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-filter:grayscale(100%);
+}
+.banner .text{
+	margin-top: 70px;
+	margin-left: 100px;
+}
+
+.banner .sliderNavigation{
+	margin-top: 150px;
+	text-align: center;
 }
 
 
@@ -104,5 +182,26 @@ body{
 	background-image:url(logo.png);
 	background-color:red;
 	background-repeat:no-repeat;
+}
+
+
+.main{
+	/*border:solid 10px blue;*/
+}
+
+.main >.parrafo{
+	font-size: 40px;
+	text-align: center;
+}
+
+.skills .skillsDetail{
+	display:flex;
+	justify-content:space-around;
+
+	/*flex-direction:column;*/
+}
+.skills .skillsDetail .skill{
+	margin:0 20px;
+	border:solid 2px blue;
 }
 
