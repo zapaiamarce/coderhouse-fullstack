@@ -1,0 +1,10 @@
+.button{
+	border-radius: 5px;
+	font-size: 40px;
+	background-color: blue;
+	border: solid 2px black;
+}
+
+.button.primary{
+	background-color: red;
+}
