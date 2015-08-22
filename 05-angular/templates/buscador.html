@@ -1,0 +1,9 @@
+<form ng-submit="validarYBuscar()">
+	<fieldset>
+		<input type="text" placeholder="Ipod" ng-model="query">
+		<div ng-show="error">
+			{{error}}
+		</div>
+		<button>Buscar</button>
+	</fieldset>
+</form>
