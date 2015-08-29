@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tareaApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Tarea</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+	<script src="tarea.js"></script>
+
+	<link rel="stylesheet" href="tarea.css">
+</head>
+<body>
+	<div>
+		<header>
+			<nav>
+				<a href="" ui-sref="uno">Sección 1</a>
+				<a href="" ui-sref="dos">Sección 2</a>
+			</nav>
+		</header>
+		<section class="main" ui-view></section>
+	</div>
+</body>
+</html>

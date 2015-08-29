@@ -1,0 +1,10 @@
+git status
+git add .
+git commit -am "mensaje del commit"
+git log
+git remote add
+
+git pull NOMBRE_DE_REMOTO BRANCH
+git push NOMBRE_DE_REMOTO BRANCH
+
+git clone RUTA_DEL_REPO

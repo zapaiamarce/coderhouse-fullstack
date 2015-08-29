@@ -1,0 +1,19 @@
+<!-- {{saludo}} -->
+
+<input type="text" ng-model="busqueda">
+<button ng-click="buscar()">Buscar</button>
+
+
+
+<section class="results">
+	<article ng-repeat="producto in resultados">
+		<h1>{{producto.title}}</h1>
+		<h2>{{producto.price}}</h2>
+
+		<h2>Seller ID: {{producto.seller.id}}</h2>
+		<img src="{{producto.thumbnail}}">
+		<!-- <a href="http://google.com"></a> -->
+		<a href="{{producto.permalink}}">Link</a>
+
+	</article>
+</section>
