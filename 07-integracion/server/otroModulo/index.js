@@ -1,0 +1,1 @@
+exports.test = 'soy el index de otroModulo';

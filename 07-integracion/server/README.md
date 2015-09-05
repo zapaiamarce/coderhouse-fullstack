@@ -1,0 +1,7 @@
+- Tarea
+	- - establecer un middleware que escuche en el metodo get la ruta /meliProxy (app.get('/meliProxy')
+- Recibir el parametro q y usarlo '/meliProxy?q=mesa'
+- Invocar al API de ML usando el modulo 'request'
+- https://www.npmjs.com/package/request
+- Devolver la respuesta de meli
+-  si llamo a localhost:8054/meliProxy?q=sillon deberia devolverme lo que devuelve el api de ML
