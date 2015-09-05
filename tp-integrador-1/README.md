@@ -4,6 +4,13 @@
 
 3 - Maquetar Resultado.png (Reutilizando header.css)
 
-4 - Instalar Angular
+4 - Instalar Angular (con bower (necesita node))
+	- Instalar Node JS
+	- Instalar Bower
+	- Instalar Angular y el UI Router
+
+	- bower init (parados en la carpeta del proy)
+	- bower install --save angular
+	- bower install --save angular-ui-router
 
 5 - Crear un modulo con un router (dos estados: home y resultado) con sus controllers (controllers.js) y meter el html de la parte central de Home y Resultado en dos templates.
