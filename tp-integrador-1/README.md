@@ -14,3 +14,8 @@
 	- bower install --save angular-ui-router
 
 5 - Crear un modulo con un router (dos estados: home y resultado) con sus controllers (controllers.js) y meter el html de la parte central de Home y Resultado en dos templates.
+
+6 - Unificar todo en un index.html
+	- Va a contener Header Footer y el contenedor central (ui-view)
+	- El contenedor central va a mostrar la home o el restultado dependiendo de la ruta
+	
