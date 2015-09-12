@@ -15,7 +15,8 @@ m.connect(mongoUrl,function(err){
 var schema = new m.Schema({ 
 	name: 'string', 
 	size: 'string',
-	edad: Number
+	edad: Number,
+	token:'string'
 });
 var User = m.model('User', schema);
 
@@ -62,8 +63,12 @@ User.update(query,update,options,function(err,docs){
 })
 
 User.findOne(query,function(err,res){
-	res.toJSON();
-	console.log('findOne',res)
+	if(err){
+		res.status(400).json({error:'algo paso con tal cosa'});
+	}else{
+		res.toJSON();
+		console.log('findOne',res)
+	}
 })
 
 User.findById(query,function(err,res){
