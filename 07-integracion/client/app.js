@@ -21,7 +21,17 @@ mod.config(function($stateProvider,$urlRouterProvider) {
 })
 
 
-mod.controller('HomeCtrl',function($scope,$state){
+mod.controller('HomeCtrl',function($scope,$state,$http){
+	$http({
+		method:'post',
+		url:'http://localhost:3000/users',
+		data:{
+			name:'prueba'
+		}
+	}).then(function(res){
+		console.log(res)
+	})
+
 	$scope.irAlResultado = function(){
 		var query = $scope.parametroDeBusqueda;
 

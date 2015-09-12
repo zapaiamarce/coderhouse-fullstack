@@ -8,5 +8,12 @@
 		password:String,
 		... todo lo que quieran
 	  }
-
 	- POST, GET, PUT, DELETE (host:puerto/users)
+	
+	Ejemplo
+		app.put('/users/:userId',function(req,res){
+			// uso el req.params.userId para 
+			// buscar en la base 
+			// y lo actualizo con req.body
+			res.json({data:'ok'})
+		})
