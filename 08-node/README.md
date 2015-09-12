@@ -17,3 +17,6 @@
 			// y lo actualizo con req.body
 			res.json({data:'ok'})
 		})
+		app.post('/users/',function(req,res){
+			res.status(201).end();
+		})
