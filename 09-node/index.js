@@ -7,10 +7,18 @@ var bodyParser = require('body-parser')
 var usersModel = require('./models/users')
 var apartmentsModel = require('./models/apartments')
 var jwt = require('jwt-simple');
+var mandrill = require('mandrill-api/mandrill');
+var mandrill_client = new mandrill.Mandrill('FGCCtbZq5Bf6p5lMqEzKTQ');
+
+
+var passport = require('passport');
+require('./facebookStrategy');
+
 var secret = 'asdasdasdsadasdasda';
 
 // middlewares
 app.use(bodyParser.json())
+app.use(passport.initialize())
 
 m.connect(mongoUrl,function(err){
 	if(err){
@@ -18,6 +26,37 @@ m.connect(mongoUrl,function(err){
 	}else{
 		console.log('ta todo bien')
 	}
+});
+
+
+app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get('/auth/facebook/callback', 
+	passport.authenticate('facebook'),function(req,res){
+
+	var tokenPayload = {
+		id:req.user._id
+	}
+
+	res.json({
+		token:jwt.encode(tokenPayload, secret)
+	});
+
+	var message = {
+	    "html": "Hola usuario:"+req.user,
+	    "subject": "Bienvenido",
+	    "from_email": "message.from_email@example.com",
+	    "from_name": "Example Name",
+	    "to": [{
+	            "email": req.user.email
+	        }]
+	};
+
+	mandrill_client.messages.send({"message": message}, function(result){
+	    console.log('email result',result);  
+	},function(e) {
+	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message)
+	});
 });
 
 
@@ -29,7 +68,14 @@ app.get('/',function(req,res){
 	res.json({
 		saludo:'hola'
 	})
+});
+
+app.get('/auth/facebook/callback',function(req,res){
+	res.json({
+		saludo:'hola'
+	})
 })
+
 
 app.get('/users/token',function(req,res){
 
@@ -66,16 +112,21 @@ app.post('/users',function(req,res){
 	});
 });
 
-app.post('/apartments',function(req,res){
+var authUser = function(req,res,next){
 	try{
-		var decodedUser =  jwt.decode(req.headers.authorization, secret);
+		req.decodedUser =  jwt.decode(req.headers.authorization, secret);
+		next();
 	}catch(e){
-		res.status(400).json({error:'invalid token'})
+		req.decodedUser = null;
+		next();
 	}
+}
+
+app.post('/apartments',authUser,function(req,res){
 	
-	if(decodedUser.id){
+	if(req.decodedUser.id){
 		var newApartment = new apartmentsModel(req.body);
-		newApartment.owner = decodedUser.id;
+		newApartment.owner = req.decodedUser.id;
 
 		newApartment.save(function(err){
 			if(!err){
@@ -85,7 +136,6 @@ app.post('/apartments',function(req,res){
 			}
 		});
 	}
-
 });
 
 
