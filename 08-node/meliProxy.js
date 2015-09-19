@@ -12,6 +12,7 @@ app.use(bodyParser.json())
 app.use(cors());
 
 app.use(function(req,res,next){
+	console.log(req.query)
 	console.log(req.body);
 	next();
 })
@@ -30,7 +31,7 @@ app.put('/users/:email',function(req,res){
 			email:req.params.email,
 			_id:authId
 		}
-		
+
 		Users.update(query,req.body,function(){
 
 		})
