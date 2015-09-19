@@ -8,7 +8,7 @@ var usersModel = require('./models/users')
 var apartmentsModel = require('./models/apartments')
 var jwt = require('jwt-simple');
 var mandrill = require('mandrill-api/mandrill');
-var mandrill_client = new mandrill.Mandrill('FGCCtbZq5Bf6p5lMqEzKTQ');
+var mandrill_client = new mandrill.Mandrill('asdasdasdasd');
 
 
 var passport = require('passport');

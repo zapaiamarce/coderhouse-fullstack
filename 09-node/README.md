@@ -1,4 +1,2 @@
 - passport
 - emails
-- files
-- websockets

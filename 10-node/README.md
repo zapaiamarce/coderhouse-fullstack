@@ -1,0 +1,3 @@
+- files (cloudinary)
+- websockets
+- Heroku App para el client

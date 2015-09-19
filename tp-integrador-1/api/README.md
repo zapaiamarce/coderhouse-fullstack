@@ -21,7 +21,8 @@ users {
 	password:String,
 	fullname:String,
 	active:Bollean,
-	reservations:[IDs]
+	reservations:[IDs],
+	apartments:[IDs]
 }
 
 apartments {
@@ -32,6 +33,9 @@ apartments {
 		fullAdress:String,
 		cord:geoJSON // http://geojson.org/
 	},
+	pictures:[{
+		url:"url/url"
+	}],
 	reservations:[IDs]
 }
 
