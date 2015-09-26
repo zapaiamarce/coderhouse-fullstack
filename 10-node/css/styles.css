@@ -1,0 +1,1 @@
+body{display:-webkit-flex;display:-ms-flexbox;display:flex;height:600px;background-color:rgba(0,0,0,.5)}.button,.button-large{display:inline-block;border-radius:5px;padding-top:10px 30px}.button-large{border-radius:10px;width:100%}

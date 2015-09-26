@@ -1,0 +1,27 @@
+@columna: 300px;
+@color: #000;
+
+body{
+	display: flex;
+	height: @columna*2;
+	background-color: fade(@color,50%);
+}
+
+// .header{
+// 	.logo{
+		// una clase dentro de otra
+// 	}
+// }
+
+
+.button{
+	display: inline-block;
+	border-radius: 5px;
+	padding-top: 10px 30px;
+}
+
+.button-large{
+	&:extend(.button);
+	border-radius:10px;
+	width: 100%;
+}

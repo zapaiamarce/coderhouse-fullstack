@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<!-- 
 	<script src="/socket.io/socket.io.js"></script>
 
 	<script>
@@ -12,8 +13,20 @@
 	    console.log(msg);
 	  });
 	</script>
+
+	 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	<script src="bower_components/ngstorage/ngStorage.js"></script>
+	<script src="app.js"></script>
+
 </head>
-<body>
+<body ng-app="myApp">
 	<h1>soy el index.html</h1>
+	<form ng-controller="FormCtrl" ng-submit="submit()">
+		<h1>Form</h1>
+		<button type="button" ng-click="generateToken()">generateToken</button>
+
+		<button type="submit">submit</button>
+	</form>
 </body>
 </html>

@@ -6,7 +6,7 @@ var socketIo = require('socket.io');
 var io = socketIo(http);
 var multer  = require('multer');
 var upload = multer({ dest: 'uploads/' })
-
+var cloudinary = require('./cloudinary');
 
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
@@ -17,8 +17,12 @@ app.get('/', function(req, res){
   	res.sendfile('index.html');
 });
 
-app.post('/picture',upload.single('foto'), function(req, res){
-	console.log(req.file)
+app.post('/picture',multipartMiddleware, function(req, res){
+	var imagePath = req.files.logo.path
+	
+	cloudinary.uploader.upload(imagePath, function(result) { 
+	  	console.log(result);
+	});
 });
 
 io.on('connection', function(socket){
