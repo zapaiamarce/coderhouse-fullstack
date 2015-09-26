@@ -1,3 +1,5 @@
+# Requerimientos Extra
+	- Notificar al usuario que alguien le reservo un departamento en ese momento (socket.io)
 # Endpoints
 	- users 
 		- POST - GET - PUT - DELETE
